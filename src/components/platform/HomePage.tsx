@@ -63,11 +63,20 @@ export function HomePage() {
           
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
-            <Button size="lg" className="px-8 relative overflow-hidden group bg-gradient-to-r from-primary to-primary/80 hover:from-primary hover:to-primary transition-all duration-300 glow-primary">
-              <span className="relative z-10">Initialize Platform</span>
+            <Button 
+              size="lg" 
+              className="px-8 relative overflow-hidden group bg-gradient-to-r from-primary to-primary/80 hover:from-primary hover:to-primary transition-all duration-300 glow-primary"
+              onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <span className="relative z-10">View Our Work</span>
             </Button>
-            <Button variant="outline" size="lg" className="px-8 border-2 hover:bg-primary/10 border-primary/50">
-              View Demo Sites
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="px-8 border-2 hover:bg-primary/10 border-primary/50"
+              onClick={() => window.open('https://mothebroker.com', '_blank')}
+            >
+              See Live Example
             </Button>
           </div>
 
@@ -175,10 +184,10 @@ export function HomePage() {
                     <div className="absolute top-0 right-0 w-20 h-20 bg-primary/10 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700"></div>
                     <CardHeader className="relative z-10">
                       <Palette className="w-8 h-8 text-primary mb-4 group-hover:rotate-12 transition-transform duration-300" />
-                      <CardTitle className="text-xl font-mono tracking-wide">Signature Design System</CardTitle>
+                      <CardTitle className="text-xl font-mono tracking-wide">Custom Design Systems</CardTitle>
                     </CardHeader>
                     <CardContent className="relative z-10">
-                      <p className="text-muted-foreground">Electric blue, warm gold, and deep crimson palette with advanced typography and geometric patterns</p>
+                      <p className="text-muted-foreground">Tailored visual identity and design frameworks that align with your brand and industry standards</p>
                     </CardContent>
                   </Card>
                 </motion.div>

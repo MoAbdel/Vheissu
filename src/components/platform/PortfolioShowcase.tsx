@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight, MapPin, Camera, DollarSign, Home, TrendingUp, Award, ExternalLink } from "lucide-react"
+import { ArrowRight, MapPin, Camera, DollarSign, TrendingUp, Award, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -48,18 +48,18 @@ const portfolioProjects = [
     description: "Built credibility and trust for sensitive financial services while maintaining client privacy and regulatory compliance."
   },
   {
-    id: "home-services", 
-    industry: "Home Services",
-    client: "Premium Landscaping",
-    challenge: "Seasonal business needing year-round lead generation",
-    solution: "Visual proof + local dominance strategy", 
-    specialization: "Seasonal Business Optimization",
-    results: "350% local search visibility",
-    color: "from-green-600 to-lime-600", 
-    icon: <Home className="w-8 h-8" />,
-    features: ["Before/after galleries", "Seasonal content optimization", "Local map dominance", "Review generation system"],
-    location: "Multiple Markets",
-    description: "Overcame seasonality challenges with strategic local SEO and visual storytelling that generates leads year-round."
+    id: "seo-tool",
+    industry: "SEO & Marketing Tools",
+    client: "SEO Analytics Platform",
+    challenge: "Technical product requiring educational marketing approach", 
+    solution: "Feature demonstration + conversion funnel optimization",
+    specialization: "SaaS Product Marketing",
+    results: "450% trial signups",
+    color: "from-indigo-600 to-purple-600",
+    icon: <TrendingUp className="w-8 h-8" />,
+    features: ["Product demo integration", "Educational content strategy", "Trial conversion optimization", "Technical SEO implementation"],
+    location: "Global SaaS",
+    description: "Transformed complex SEO tool into an accessible platform with educational content that converts visitors into paying subscribers."
   }
 ]
 
@@ -67,7 +67,7 @@ export function PortfolioShowcase() {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null)
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
+    <section id="portfolio" className="py-24 px-4 relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-primary/20 blur-3xl"></div>
