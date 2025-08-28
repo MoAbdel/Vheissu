@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { ArrowDown, Zap, Globe, Palette, Code2, Users, Rocket, TrendingUp, Target, Settings } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { IndustryConfigurator } from "./IndustryConfigurator"
+import { PortfolioShowcase } from "./PortfolioShowcase"
 
 export function HomePage() {
   const [scrollY, setScrollY] = useState(0)
@@ -288,8 +288,8 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Industry Configurator */}
-      <IndustryConfigurator />
+      {/* Portfolio Showcase */}
+      <PortfolioShowcase />
 
       {/* CTA Section - Diagonal Design */}
       <section className="relative py-32 px-4 overflow-hidden">
