@@ -13,22 +13,22 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 8% 12%;
     
-    /* Enhanced neon green primary - works on light */
-    --primary: 142 100% 45%;             /* Slightly darker for contrast */
+    /* Electric blue primary - Vheissu signature */
+    --primary: 214 100% 55%;             /* Electric blue */
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 142 100% 55%;        /* Brighter glow variant */
-    --primary-dark: 142 100% 35%;        /* Darker variant */
+    --primary-glow: 214 100% 70%;        /* Brighter blue glow */
+    --primary-dark: 214 100% 40%;        /* Darker blue variant */
     
-    /* Sophisticated secondary palette - light mode */
-    --secondary: 270 95% 55%;            /* Adjusted purple for light */
-    --secondary-foreground: 0 0% 98%;
-    --secondary-glow: 270 95% 70%;       /* Lighter purple */
-    --secondary-dark: 270 95% 40%;       /* Darker purple */
+    /* Warm gold secondary palette - light mode */
+    --secondary: 45 100% 60%;            /* Warm gold */
+    --secondary-foreground: 240 8% 12%;  /* Dark text on gold */
+    --secondary-glow: 45 100% 75%;       /* Lighter gold */
+    --secondary-dark: 45 100% 45%;       /* Darker gold */
     
-    /* Accent colors for depth - light mode */
-    --accent: 195 100% 50%;              /* Darker cyan for contrast */
+    /* Deep crimson accent - light mode */
+    --accent: 348 85% 55%;               /* Deep crimson */
     --accent-foreground: 0 0% 98%;
-    --accent-glow: 195 100% 65%;
+    --accent-glow: 348 85% 70%;
     
     /* Neutral grays - light mode */
     --muted: 240 5% 92%;                 /* Light gray */
@@ -63,22 +63,22 @@
     --popover: 240 8% 10%;
     --popover-foreground: 0 0% 98%;
     
-    /* Enhanced neon green primary - dark mode */
-    --primary: 142 100% 55%;             /* Brighter neon green */
+    /* Electric blue primary - dark mode enhanced */
+    --primary: 214 100% 65%;             /* Brighter electric blue */
     --primary-foreground: 240 8% 6%;
-    --primary-glow: 142 100% 70%;        /* Lighter glow variant */
-    --primary-dark: 142 100% 40%;        /* Darker variant */
+    --primary-glow: 214 100% 80%;        /* Intense blue glow */
+    --primary-dark: 214 100% 45%;        /* Darker blue variant */
     
-    /* Sophisticated secondary palette - dark mode */
-    --secondary: 270 95% 65%;            /* Electric purple */
+    /* Warm gold secondary - dark mode */
+    --secondary: 45 100% 70%;            /* Bright warm gold */
     --secondary-foreground: 240 8% 6%;
-    --secondary-glow: 270 95% 80%;       /* Lighter purple */
-    --secondary-dark: 270 95% 45%;       /* Darker purple */
+    --secondary-glow: 45 100% 85%;       /* Lighter gold glow */
+    --secondary-dark: 45 100% 50%;       /* Darker gold */
     
-    /* Accent colors for depth - dark mode */
-    --accent: 195 100% 60%;              /* Cyan accent */
+    /* Deep crimson accent - dark mode */
+    --accent: 348 85% 65%;               /* Bright crimson */
     --accent-foreground: 240 8% 6%;
-    --accent-glow: 195 100% 75%;
+    --accent-glow: 348 85% 80%;
     
     /* Neutral grays with warm undertone - dark mode */
     --muted: 240 8% 15%;                 /* Warm dark gray */

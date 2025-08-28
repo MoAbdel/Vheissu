@@ -124,6 +124,27 @@ export default {
             transform: "translate(5px, 10px)",
           },
         },
+        "vheissu-slide": {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        "geometric-spin": {
+          "0%": {
+            transform: "rotate(0deg) scale(1)",
+          },
+          "50%": {
+            transform: "rotate(180deg) scale(1.1)",
+          },
+          "100%": {
+            transform: "rotate(360deg) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -132,6 +153,8 @@ export default {
         "glow-pulse": "glow-pulse 2s ease-in-out infinite alternate",
         "parallax-float": "parallax-float 6s ease-in-out infinite",
         glitch: "glitch 500ms infinite",
+        "vheissu-slide": "vheissu-slide 0.8s ease-out",
+        "geometric-spin": "geometric-spin 4s ease-in-out infinite",
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
