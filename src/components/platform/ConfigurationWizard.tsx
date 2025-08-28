@@ -56,6 +56,31 @@ const colorSchemes = {
     { name: "Corporate Authority", colors: "from-slate-700 to-gray-800", description: "Professional power" },
     { name: "Trustworthy Gold", colors: "from-amber-600 to-yellow-600", description: "Established credibility" },
     { name: "Modern Legal", colors: "from-blue-800 to-slate-700", description: "Contemporary expertise" }
+  ],
+  corporate: [
+    { name: "Executive Blue", colors: "from-blue-800 to-slate-700", description: "Corporate leadership" },
+    { name: "Professional Gray", colors: "from-gray-600 to-slate-800", description: "Business authority" },
+    { name: "Success Green", colors: "from-emerald-600 to-teal-700", description: "Growth and prosperity" }
+  ],
+  automotive: [
+    { name: "Racing Red", colors: "from-red-600 to-rose-700", description: "Speed and performance" },
+    { name: "Luxury Black", colors: "from-gray-800 to-black", description: "Premium elegance" },
+    { name: "Electric Blue", colors: "from-blue-600 to-cyan-600", description: "Innovation and tech" }
+  ],
+  realestate: [
+    { name: "Luxury Gold", colors: "from-amber-600 to-yellow-600", description: "Premium properties" },
+    { name: "Trust Blue", colors: "from-blue-600 to-indigo-700", description: "Reliable expertise" },
+    { name: "Nature Green", colors: "from-green-600 to-emerald-700", description: "Home and growth" }
+  ],
+  restaurant: [
+    { name: "Warm Amber", colors: "from-amber-500 to-orange-600", description: "Cozy dining" },
+    { name: "Fresh Green", colors: "from-green-500 to-lime-600", description: "Fresh ingredients" },
+    { name: "Elegant Red", colors: "from-red-600 to-rose-700", description: "Fine dining" }
+  ],
+  education: [
+    { name: "Academic Blue", colors: "from-blue-600 to-indigo-700", description: "Knowledge and trust" },
+    { name: "Creative Purple", colors: "from-purple-600 to-indigo-700", description: "Innovation in learning" },
+    { name: "Growth Green", colors: "from-green-600 to-teal-700", description: "Development and progress" }
   ]
 }
 

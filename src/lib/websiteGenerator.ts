@@ -157,6 +157,101 @@ export class WebsiteGenerator {
             icon: ['shopping-bag', 'truck', 'star', 'credit-card'][index] || 'shopping'
           }))
         }
+      },
+      realestate: {
+        hero: {
+          headline: `Your Trusted Real Estate Partner in ${config.location}`,
+          subheadline: `${config.companyName} helps ${config.targetAudience.toLowerCase()} find their perfect home or investment property. Experience personalized service with local market expertise.`,
+          ctaText: 'Find Your Dream Home'
+        },
+        about: {
+          title: 'Local Expertise, Personal Service',
+          content: `${config.companyName} is a leading real estate agency serving ${config.location} and surrounding communities. Our experienced agents specialize in ${config.keyServices.toLowerCase()} and are committed to making your real estate journey smooth and successful. We combine deep local market knowledge with cutting-edge technology to deliver exceptional results for our clients.`
+        },
+        services: {
+          title: 'Real Estate Services',
+          items: config.keyServices.split(',').slice(0, 4).map((service, index) => ({
+            name: service.trim(),
+            description: `Expert ${service.trim().toLowerCase()} services with personalized attention and local market insights.`,
+            icon: ['home', 'key', 'dollar-sign', 'map-pin'][index] || 'home'
+          }))
+        }
+      },
+      corporate: {
+        hero: {
+          headline: `Strategic Business Solutions in ${config.location}`,
+          subheadline: `${config.companyName} empowers ${config.targetAudience.toLowerCase()} with innovative strategies and proven results. Transform your business with our expertise.`,
+          ctaText: 'Schedule Consultation'
+        },
+        about: {
+          title: 'Driving Business Excellence',
+          content: `${config.companyName} is a premier consulting firm serving businesses in ${config.location}. We specialize in ${config.keyServices.toLowerCase()} and have helped countless organizations achieve their goals. Our team of experienced consultants combines strategic thinking with practical implementation to deliver measurable results that drive sustainable growth.`
+        },
+        services: {
+          title: 'Business Solutions',
+          items: config.keyServices.split(',').slice(0, 4).map((service, index) => ({
+            name: service.trim(),
+            description: `Professional ${service.trim().toLowerCase()} designed to optimize performance and accelerate growth.`,
+            icon: ['briefcase', 'trending-up', 'users', 'target'][index] || 'business'
+          }))
+        }
+      },
+      automotive: {
+        hero: {
+          headline: `Premium Automotive Services in ${config.location}`,
+          subheadline: `${config.companyName} delivers exceptional ${config.keyServices.toLowerCase()} for ${config.targetAudience.toLowerCase()}. Experience quality, reliability, and customer satisfaction.`,
+          ctaText: 'Service Your Vehicle'
+        },
+        about: {
+          title: 'Your Trusted Automotive Partner',
+          content: `${config.companyName} has been serving the automotive needs of ${config.location} for years. Our certified technicians specialize in ${config.keyServices.toLowerCase()} using state-of-the-art equipment and genuine parts. We're committed to keeping your vehicle running smoothly while providing honest, transparent service you can trust.`
+        },
+        services: {
+          title: 'Automotive Services',
+          items: config.keyServices.split(',').slice(0, 4).map((service, index) => ({
+            name: service.trim(),
+            description: `Expert ${service.trim().toLowerCase()} performed by certified technicians with quality parts and warranties.`,
+            icon: ['car', 'wrench', 'shield', 'clock'][index] || 'automotive'
+          }))
+        }
+      },
+      restaurant: {
+        hero: {
+          headline: `Exceptional Dining Experience in ${config.location}`,
+          subheadline: `${config.companyName} serves delicious ${config.keyServices.toLowerCase()} to ${config.targetAudience.toLowerCase()}. Discover fresh flavors and warm hospitality.`,
+          ctaText: 'Make Reservation'
+        },
+        about: {
+          title: 'Crafting Memorable Meals',
+          content: `${config.companyName} brings authentic flavors and exceptional dining to ${config.location}. Our passionate chefs create ${config.keyServices.toLowerCase()} using fresh, locally-sourced ingredients. Whether you're celebrating a special occasion or enjoying a casual meal, we're committed to providing an unforgettable dining experience.`
+        },
+        services: {
+          title: 'Menu Highlights',
+          items: config.keyServices.split(',').slice(0, 4).map((service, index) => ({
+            name: service.trim(),
+            description: `Expertly prepared ${service.trim().toLowerCase()} made with fresh ingredients and authentic recipes.`,
+            icon: ['utensils', 'chef-hat', 'wine', 'star'][index] || 'dining'
+          }))
+        }
+      },
+      education: {
+        hero: {
+          headline: `Excellence in Education - ${config.location}`,
+          subheadline: `${config.companyName} provides outstanding ${config.keyServices.toLowerCase()} for ${config.targetAudience.toLowerCase()}. Unlock potential and achieve academic success.`,
+          ctaText: 'Enroll Today'
+        },
+        about: {
+          title: 'Empowering Through Education',
+          content: `${config.companyName} is dedicated to providing quality education in ${config.location}. Our experienced educators specialize in ${config.keyServices.toLowerCase()} and are committed to helping every student succeed. We create a supportive learning environment where students can develop their skills, build confidence, and reach their full potential.`
+        },
+        services: {
+          title: 'Educational Programs',
+          items: config.keyServices.split(',').slice(0, 4).map((service, index) => ({
+            name: service.trim(),
+            description: `Comprehensive ${service.trim().toLowerCase()} designed to engage students and promote academic excellence.`,
+            icon: ['book', 'graduation-cap', 'users', 'award'][index] || 'education'
+          }))
+        }
       }
     }
 
@@ -186,6 +281,7 @@ export class WebsiteGenerator {
 
   private getColorSchemeStyles(colorScheme: string) {
     const schemes = {
+      // Healthcare
       'Medical Professional': {
         primaryColor: '#2563eb',
         secondaryColor: '#0891b2',
@@ -201,6 +297,7 @@ export class WebsiteGenerator {
         secondaryColor: '#2563eb',
         accentColor: '#0891b2'
       },
+      // E-commerce
       'Premium Luxury': {
         primaryColor: '#9333ea',
         secondaryColor: '#db2777',
@@ -216,6 +313,7 @@ export class WebsiteGenerator {
         secondaryColor: '#dc2626',
         accentColor: '#ea580c'
       },
+      // Legal
       'Corporate Authority': {
         primaryColor: '#374151',
         secondaryColor: '#1f2937',
@@ -230,6 +328,86 @@ export class WebsiteGenerator {
         primaryColor: '#1e40af',
         secondaryColor: '#374151',
         accentColor: '#0891b2'
+      },
+      // Corporate
+      'Executive Blue': {
+        primaryColor: '#1e40af',
+        secondaryColor: '#374151',
+        accentColor: '#0891b2'
+      },
+      'Professional Gray': {
+        primaryColor: '#4b5563',
+        secondaryColor: '#1f2937',
+        accentColor: '#374151'
+      },
+      'Success Green': {
+        primaryColor: '#059669',
+        secondaryColor: '#0d9488',
+        accentColor: '#16a34a'
+      },
+      // Automotive
+      'Racing Red': {
+        primaryColor: '#dc2626',
+        secondaryColor: '#be185d',
+        accentColor: '#ea580c'
+      },
+      'Luxury Black': {
+        primaryColor: '#1f2937',
+        secondaryColor: '#000000',
+        accentColor: '#4b5563'
+      },
+      'Electric Blue': {
+        primaryColor: '#2563eb',
+        secondaryColor: '#0891b2',
+        accentColor: '#06b6d4'
+      },
+      // Real Estate
+      'Luxury Gold': {
+        primaryColor: '#d97706',
+        secondaryColor: '#f59e0b',
+        accentColor: '#eab308'
+      },
+      'Trust Blue': {
+        primaryColor: '#2563eb',
+        secondaryColor: '#4338ca',
+        accentColor: '#0891b2'
+      },
+      'Nature Green': {
+        primaryColor: '#16a34a',
+        secondaryColor: '#059669',
+        accentColor: '#0d9488'
+      },
+      // Restaurant
+      'Warm Amber': {
+        primaryColor: '#f59e0b',
+        secondaryColor: '#ea580c',
+        accentColor: '#dc2626'
+      },
+      'Fresh Green': {
+        primaryColor: '#16a34a',
+        secondaryColor: '#65a30d',
+        accentColor: '#84cc16'
+      },
+      'Elegant Red': {
+        primaryColor: '#dc2626',
+        secondaryColor: '#be185d',
+        accentColor: '#f97316'
+      },
+      // Education
+      'Academic Blue': {
+        primaryColor: '#2563eb',
+        secondaryColor: '#4338ca',
+        accentColor: '#0891b2'
+      },
+      'Creative Purple': {
+        primaryColor: '#9333ea',
+        secondaryColor: '#4338ca',
+        accentColor: '#db2777'
+      },
+      'Growth Green': {
+        primaryColor: '#16a34a',
+        secondaryColor: '#0d9488',
+        accentColor: '#059669'
       }
     }
 
