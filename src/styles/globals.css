@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode - clean and modern */
+    --background: 0 0% 98%;              /* Almost white background */
+    --foreground: 240 8% 12%;            /* Dark text */
+    --card: 0 0% 100%;                   /* Pure white cards */
+    --card-foreground: 240 8% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 8% 12%;
+    
+    /* Enhanced neon green primary - works on light */
+    --primary: 142 100% 45%;             /* Slightly darker for contrast */
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 142 100% 55%;        /* Brighter glow variant */
+    --primary-dark: 142 100% 35%;        /* Darker variant */
+    
+    /* Sophisticated secondary palette - light mode */
+    --secondary: 270 95% 55%;            /* Adjusted purple for light */
+    --secondary-foreground: 0 0% 98%;
+    --secondary-glow: 270 95% 70%;       /* Lighter purple */
+    --secondary-dark: 270 95% 40%;       /* Darker purple */
+    
+    /* Accent colors for depth - light mode */
+    --accent: 195 100% 50%;              /* Darker cyan for contrast */
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 195 100% 65%;
+    
+    /* Neutral grays - light mode */
+    --muted: 240 5% 92%;                 /* Light gray */
+    --muted-foreground: 240 8% 45%;      /* Dark gray text */
+    --muted-light: 240 5% 96%;           /* Very light gray */
+    
+    /* Functional colors - light mode */
+    --destructive: 0 85% 55%;            /* Red for errors */
+    --destructive-foreground: 0 0% 98%;
+    --warning: 45 95% 50%;               /* Amber warning */
+    --warning-foreground: 240 8% 12%;
+    --success: 120 80% 40%;              /* Success green */
+    --success-foreground: 0 0% 98%;
+    
+    /* Interactive elements - light mode */
+    --border: 240 8% 85%;                /* Light borders */
+    --input: 240 5% 95%;                 /* Light input backgrounds */
+    --ring: 142 100% 45%;                /* Focus rings */
+    
+    /* Design system utilities */
+    --radius: 4px;
+    --shadow-color: 240 8% 90%;
+    --glow-intensity: 0.2;
+  }
+
+  .dark {
+    /* Dark mode - cyberpunk aesthetics */
+    --background: 240 8% 6%;             /* Rich dark background */
+    --foreground: 0 0% 98%;              /* Pure light text */
+    --card: 240 8% 8%;                   /* Slightly lighter card background */
+    --card-foreground: 0 0% 95%;
+    --popover: 240 8% 10%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Enhanced neon green primary - dark mode */
+    --primary: 142 100% 55%;             /* Brighter neon green */
+    --primary-foreground: 240 8% 6%;
+    --primary-glow: 142 100% 70%;        /* Lighter glow variant */
+    --primary-dark: 142 100% 40%;        /* Darker variant */
+    
+    /* Sophisticated secondary palette - dark mode */
+    --secondary: 270 95% 65%;            /* Electric purple */
+    --secondary-foreground: 240 8% 6%;
+    --secondary-glow: 270 95% 80%;       /* Lighter purple */
+    --secondary-dark: 270 95% 45%;       /* Darker purple */
+    
+    /* Accent colors for depth - dark mode */
+    --accent: 195 100% 60%;              /* Cyan accent */
+    --accent-foreground: 240 8% 6%;
+    --accent-glow: 195 100% 75%;
+    
+    /* Neutral grays with warm undertone - dark mode */
+    --muted: 240 8% 15%;                 /* Warm dark gray */
+    --muted-foreground: 0 0% 75%;        /* Light gray text */
+    --muted-light: 240 8% 25%;           /* Lighter muted */
+    
+    /* Functional colors - dark mode */
+    --destructive: 0 95% 60%;            /* Bright error red */
+    --destructive-foreground: 0 0% 98%;
+    --warning: 45 100% 60%;              /* Amber warning */
+    --warning-foreground: 240 8% 6%;
+    --success: 120 100% 50%;             /* Success green */
+    --success-foreground: 240 8% 6%;
+    
+    /* Interactive elements - dark mode */
+    --border: 240 8% 20%;                /* Subtle borders */
+    --input: 240 8% 12%;                 /* Input backgrounds */
+    --ring: 142 100% 55%;                /* Focus rings */
+    
+    /* Design system utilities */
+    --radius: 4px;
+    --shadow-color: 240 8% 3%;
+    --glow-intensity: 0.3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased font-mono;
+    background-image: 
+      radial-gradient(circle at 20% 50%, hsla(var(--primary), 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsla(var(--secondary), 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsla(var(--accent), 0.02) 0%, transparent 50%),
+      linear-gradient(180deg, hsla(var(--background), 1) 0%, hsla(var(--muted), 0.2) 100%);
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Enhanced matrix effect with better color harmony */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    pointer-events: none;
+    background: 
+      repeating-linear-gradient(
+        0deg,
+        transparent 0%,
+        hsla(var(--primary), 0.02) 50%,
+        transparent 100%
+      );
+    animation: matrix-flow 20s linear infinite;
+    z-index: 1;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    pointer-events: none;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent 0%,
+        hsla(var(--secondary), 0.015) 50%,
+        transparent 100%
+      );
+    animation: matrix-flow 25s linear infinite reverse;
+    animation-delay: -8s;
+    z-index: 1;
+  }
+
+  /* Enhanced typography with better color relationships */
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 font-serif;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px hsla(var(--primary), 0.3);
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl font-bold tracking-tight mb-4 font-serif text-foreground;
+  }
+
+  h3 {
+    @apply text-3xl font-bold tracking-tight mb-4 font-serif text-foreground;
+  }
+
+  p {
+    @apply leading-7 [&:not(:first-of-type)]:mt-6 text-muted-foreground;
+  }
+}
+
+@layer components {
+  /* Glitch effect for hero text */
+  .glitch-intense {
+    @apply relative text-2xl font-serif font-bold text-primary;
+    text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.85),
+      -0.025em -0.05em 0 rgba(0, 255, 128, 0.85),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.85);
+    animation: glitch 500ms infinite;
+  }
+
+  .glitch-intense::before,
+  .glitch-intense::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip: rect(44px, 450px, 56px, 0);
+  }
+
+  .glitch-intense::before {
+    left: 3px;
+    text-shadow: -2px 0 #ff3f3f;
+    clip: rect(0, 900px, 0, 0);
+    transform: skew(0.15deg);
+  }
+
+  .glitch-intense::after {
+    left: -3px;
+    text-shadow: 2px 0 #3f3fff;
+    clip: rect(0, 900px, 0, 0);
+    transform: skew(-0.15deg);
+  }
+
+  /* Custom utility classes for enhanced color usage */
+  .glow-primary {
+    box-shadow: 0 0 20px hsla(var(--primary), 0.4);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 20px hsla(var(--secondary), 0.4);
+  }
+
+  .text-gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-secondary {
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .border-glow {
+    border: 1px solid hsla(var(--primary), 0.3);
+    box-shadow: 
+      0 0 10px hsla(var(--primary), 0.2),
+      inset 0 0 10px hsla(var(--primary), 0.1);
+  }
+}
