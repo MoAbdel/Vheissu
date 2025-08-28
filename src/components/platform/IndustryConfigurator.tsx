@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Building, Stethoscope, ShoppingBag, Briefcase, Car, Home, Utensils, GraduationCap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { ConfigurationWizard } from "./ConfigurationWizard"
 
 const industries = [
   {
@@ -65,13 +66,12 @@ const industries = [
 
 export function IndustryConfigurator() {
   const [selectedIndustry, setSelectedIndustry] = useState<string>("healthcare")
-  const [isConfiguring, setIsConfiguring] = useState(false)
+  const [showWizard, setShowWizard] = useState(false)
 
   const currentIndustry = industries.find(ind => ind.id === selectedIndustry)
 
   const handleConfigure = () => {
-    setIsConfiguring(true)
-    setTimeout(() => setIsConfiguring(false), 2000)
+    setShowWizard(true)
   }
 
   return (
@@ -210,24 +210,10 @@ export function IndustryConfigurator() {
 
                       <Button
                         onClick={handleConfigure}
-                        disabled={isConfiguring}
                         className="w-full py-3 bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary-dark font-mono tracking-wider relative overflow-hidden group"
                       >
-                        {isConfiguring ? (
-                          <motion.div
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                            className="flex items-center space-x-2"
-                          >
-                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full"></div>
-                            <span>CONFIGURING...</span>
-                          </motion.div>
-                        ) : (
-                          <>
-                            <span className="relative z-10">CONFIGURE FOR {currentIndustry.name.toUpperCase()}</span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                          </>
-                        )}
+                        <span className="relative z-10">CONFIGURE FOR {currentIndustry.name.toUpperCase()}</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </Button>
                     </CardContent>
                   </Card>
@@ -237,6 +223,13 @@ export function IndustryConfigurator() {
           </div>
         </div>
       </div>
+
+      {/* Configuration Wizard */}
+      <ConfigurationWizard
+        isOpen={showWizard}
+        onClose={() => setShowWizard(false)}
+        selectedIndustry={currentIndustry?.name || selectedIndustry}
+      />
     </section>
   )
 }

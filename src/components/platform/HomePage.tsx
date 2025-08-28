@@ -57,7 +57,6 @@ export function HomePage() {
             
               <div className="space-y-3 text-lg md:text-xl text-muted-foreground/80 font-sans leading-relaxed max-w-3xl mx-auto">
                 <p>Transform your business success across unlimited industries with intelligent website replication</p>
-                <p className="text-primary font-mono text-sm tracking-wider">ELECTRIC BLUE • WARM GOLD • DEEP CRIMSON</p>
               </div>
             </div>
           </div>
