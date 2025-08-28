@@ -86,7 +86,7 @@ export function IndustryConfigurator() {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="text-primary font-mono text-sm tracking-widest uppercase">[ INDUSTRY_CONFIGURATOR ]</span>
+            <span className="text-primary font-mono text-sm tracking-widest uppercase">INDUSTRY CONFIGURATOR</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
@@ -102,7 +102,7 @@ export function IndustryConfigurator() {
           {/* Industry Selection */}
           <div className="lg:col-span-5">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold font-mono tracking-wide">SELECT_INDUSTRY</h3>
+              <h3 className="text-2xl font-bold font-mono tracking-wide">SELECT INDUSTRY</h3>
               <div className="grid grid-cols-2 gap-4">
                 {industries.map((industry, index) => (
                   <motion.button
@@ -173,21 +173,21 @@ export function IndustryConfigurator() {
                       <div className="grid grid-cols-3 gap-4">
                         <div className="text-center p-4 bg-primary/5 rounded-lg border border-primary/10">
                           <div className="text-2xl font-bold text-primary">98%</div>
-                          <div className="text-xs text-muted-foreground font-mono">ADAPTATION_ACCURACY</div>
+                          <div className="text-xs text-muted-foreground font-mono">ADAPTATION ACCURACY</div>
                         </div>
                         <div className="text-center p-4 bg-secondary/5 rounded-lg border border-secondary/10">
                           <div className="text-2xl font-bold text-secondary">2.3s</div>
-                          <div className="text-xs text-muted-foreground font-mono">GENERATION_TIME</div>
+                          <div className="text-xs text-muted-foreground font-mono">GENERATION TIME</div>
                         </div>
                         <div className="text-center p-4 bg-accent/5 rounded-lg border border-accent/10">
                           <div className="text-2xl font-bold text-accent">47+</div>
-                          <div className="text-xs text-muted-foreground font-mono">OPTIMIZATIONS_APPLIED</div>
+                          <div className="text-xs text-muted-foreground font-mono">OPTIMIZATIONS APPLIED</div>
                         </div>
                       </div>
 
                       {/* Features adapted for industry */}
                       <div className="space-y-3">
-                        <h4 className="font-mono text-sm tracking-wider text-primary uppercase">ADAPTIVE_FEATURES</h4>
+                        <h4 className="font-mono text-sm tracking-wider text-primary uppercase">ADAPTIVE FEATURES</h4>
                         <div className="space-y-2 text-sm">
                           <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
                             <span>Color Psychology</span>
@@ -203,7 +203,7 @@ export function IndustryConfigurator() {
                           </div>
                           <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
                             <span>SEO Strategy</span>
-                            <span className="text-accent font-mono">INDUSTRY_SPECIFIC</span>
+                            <span className="text-accent font-mono">INDUSTRY SPECIFIC</span>
                           </div>
                         </div>
                       </div>
@@ -224,7 +224,7 @@ export function IndustryConfigurator() {
                           </motion.div>
                         ) : (
                           <>
-                            <span className="relative z-10">CONFIGURE_FOR_{currentIndustry.name.toUpperCase()}</span>
+                            <span className="relative z-10">CONFIGURE FOR {currentIndustry.name.toUpperCase()}</span>
                             <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                           </>
                         )}

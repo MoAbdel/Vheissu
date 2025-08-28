@@ -38,15 +38,15 @@ export function HomePage() {
         >
           {/* Brand identity */}
           <div className="mb-8">
-            <p className="glitch-intense mb-6 bg-clip-text font-mono text-sm tracking-wider md:text-base uppercase" data-text="MULTI-INDUSTRY • PLATFORM • REPLICATION • SYSTEM">
-              MULTI-INDUSTRY • PLATFORM • REPLICATION • SYSTEM
+            <p className="glitch-intense mb-6 bg-clip-text font-mono text-sm tracking-wider md:text-base uppercase" data-text="MULTI-INDUSTRY PLATFORM REPLICATION SYSTEM">
+              MULTI-INDUSTRY PLATFORM REPLICATION SYSTEM
             </p>
           </div>
 
           {/* Main headline */}
           <div className="space-y-8 max-w-4xl mx-auto mb-12">
             <div className="inline-block bg-primary/10 px-4 py-2 rounded-sm">
-              <div className="text-primary/90 font-mono text-sm md:text-base tracking-widest">[ SYSTEM INITIALIZED ]</div>
+              <div className="text-primary/90 font-mono text-sm md:text-base tracking-widest">SYSTEM INITIALIZED</div>
             </div>
             
             <div className="space-y-6">
@@ -57,7 +57,7 @@ export function HomePage() {
             
               <div className="space-y-3 text-lg md:text-xl text-muted-foreground/80 font-sans leading-relaxed max-w-3xl mx-auto">
                 <p>Transform your business success across unlimited industries with intelligent website replication</p>
-                <p className="text-primary font-mono text-sm tracking-wider">[ ELECTRIC_BLUE • WARM_GOLD • DEEP_CRIMSON ]</p>
+                <p className="text-primary font-mono text-sm tracking-wider">ELECTRIC BLUE • WARM GOLD • DEEP CRIMSON</p>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@ export function HomePage() {
             <div className="lg:col-span-5">
               <div className="space-y-6">
                 <div className="inline-block">
-                  <span className="text-secondary font-mono text-sm tracking-widest uppercase">[ CORE_FEATURES ]</span>
+                  <span className="text-secondary font-mono text-sm tracking-widest uppercase">CORE FEATURES</span>
                 </div>
                 <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
                   Industry
@@ -130,7 +130,7 @@ export function HomePage() {
                   <div className="relative bg-card/80 backdrop-blur-sm border border-primary/20 rounded-lg p-6">
                     <TrendingUp className="w-8 h-8 text-primary mb-3" />
                     <div className="text-3xl font-bold text-primary">300%</div>
-                    <div className="text-sm text-muted-foreground font-mono tracking-wider">FASTER_DEPLOYMENT</div>
+                    <div className="text-sm text-muted-foreground font-mono tracking-wider">FASTER DEPLOYMENT</div>
                   </div>
                 </div>
                 <div className="relative group mt-8">
@@ -138,7 +138,7 @@ export function HomePage() {
                   <div className="relative bg-card/80 backdrop-blur-sm border border-secondary/20 rounded-lg p-6">
                     <Target className="w-8 h-8 text-secondary mb-3" />
                     <div className="text-3xl font-bold text-secondary">15+</div>
-                    <div className="text-sm text-muted-foreground font-mono tracking-wider">INDUSTRIES_SUPPORTED</div>
+                    <div className="text-sm text-muted-foreground font-mono tracking-wider">INDUSTRIES SUPPORTED</div>
                   </div>
                 </div>
                 <div className="relative group">
@@ -146,7 +146,7 @@ export function HomePage() {
                   <div className="relative bg-card/80 backdrop-blur-sm border border-accent/20 rounded-lg p-6">
                     <Settings className="w-8 h-8 text-accent mb-3" />
                     <div className="text-3xl font-bold text-accent">∞</div>
-                    <div className="text-sm text-muted-foreground font-mono tracking-wider">CUSTOMIZATION_DEPTH</div>
+                    <div className="text-sm text-muted-foreground font-mono tracking-wider">CUSTOMIZATION DEPTH</div>
                   </div>
                 </div>
                 <div className="relative group mt-8">
@@ -154,7 +154,7 @@ export function HomePage() {
                   <div className="relative bg-card/80 backdrop-blur-sm border border-primary/20 rounded-lg p-6">
                     <Rocket className="w-8 h-8 text-primary mb-3" />
                     <div className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AI</div>
-                    <div className="text-sm text-muted-foreground font-mono tracking-wider">OPTIMIZATION_ENGINE</div>
+                    <div className="text-sm text-muted-foreground font-mono tracking-wider">OPTIMIZATION ENGINE</div>
                   </div>
                 </div>
               </div>
@@ -305,7 +305,7 @@ export function HomePage() {
             <div className="lg:col-span-7">
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <span className="text-accent font-mono text-sm tracking-widest uppercase">[ INITIALIZATION_SEQUENCE ]</span>
+                  <span className="text-accent font-mono text-sm tracking-widest uppercase">INITIALIZATION SEQUENCE</span>
                   <h2 className="text-4xl md:text-6xl font-bold leading-tight">
                     Transform Your
                     <br />
@@ -320,11 +320,11 @@ export function HomePage() {
                 
                 <div className="flex flex-col sm:flex-row gap-6">
                   <Button size="lg" className="px-8 py-4 bg-gradient-to-r from-primary to-primary/80 hover:from-primary hover:to-primary text-lg font-mono tracking-wider relative group overflow-hidden">
-                    <span className="relative z-10">INITIALIZE_PLATFORM</span>
+                    <span className="relative z-10">INITIALIZE PLATFORM</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </Button>
                   <Button variant="outline" size="lg" className="px-8 py-4 border-2 border-secondary/50 hover:bg-secondary/10 text-lg font-mono tracking-wider">
-                    VIEW_DEMO_MATRIX
+                    VIEW DEMO MATRIX
                   </Button>
                 </div>
               </div>
@@ -348,22 +348,22 @@ export function HomePage() {
                     </div>
                     <div className="space-y-2">
                       <div className="flex justify-between">
-                        <span className="text-sm text-muted-foreground">Industries_Supported</span>
+                        <span className="text-sm text-muted-foreground">Industries Supported</span>
                         <span className="text-secondary font-mono">15+</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-sm text-muted-foreground">Performance_Boost</span>
+                        <span className="text-sm text-muted-foreground">Performance Boost</span>
                         <span className="text-accent font-mono">300%</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-sm text-muted-foreground">AI_Optimization</span>
+                        <span className="text-sm text-muted-foreground">AI Optimization</span>
                         <span className="text-primary font-mono">ACTIVE</span>
                       </div>
                     </div>
                     <div className="mt-6 p-4 bg-primary/5 rounded-lg border border-primary/10">
                       <div className="text-center">
                         <div className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">∞</div>
-                        <div className="text-xs text-muted-foreground font-mono mt-1">SCALABILITY_COEFFICIENT</div>
+                        <div className="text-xs text-muted-foreground font-mono mt-1">SCALABILITY COEFFICIENT</div>
                       </div>
                     </div>
                   </div>
