@@ -4,6 +4,8 @@ import { ArrowLeft, ArrowRight, Check, Building2, Palette, Zap, Eye, X } from "l
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { websiteGenerator } from "@/lib/websiteGenerator"
+import { DemoWebsitePreview } from "./DemoWebsitePreview"
 
 interface ConfigurationData {
   // Step 1 - Business Details
@@ -60,6 +62,8 @@ const colorSchemes = {
 export function ConfigurationWizard({ isOpen, onClose, selectedIndustry }: ConfigurationWizardProps) {
   const [currentStep, setCurrentStep] = useState(1)
   const [isGenerating, setIsGenerating] = useState(false)
+  const [generatedWebsite, setGeneratedWebsite] = useState<any>(null)
+  const [showPreview, setShowPreview] = useState(false)
   const [config, setConfig] = useState<ConfigurationData>({
     companyName: "",
     currentWebsite: "",
@@ -88,10 +92,24 @@ export function ConfigurationWizard({ isOpen, onClose, selectedIndustry }: Confi
 
   const handleGenerate = async () => {
     setIsGenerating(true)
-    // Simulate website generation
-    await new Promise(resolve => setTimeout(resolve, 3000))
-    setConfig(prev => ({ ...prev, completed: true }))
+    try {
+      const website = await websiteGenerator.generateWebsite(config)
+      setGeneratedWebsite(website)
+      setConfig(prev => ({ ...prev, completed: true }))
+    } catch (error) {
+      console.error('Failed to generate website:', error)
+      alert('Failed to generate website. Please try again.')
+    }
     setIsGenerating(false)
+  }
+
+  const handleViewDemo = () => {
+    setShowPreview(true)
+  }
+
+  const handleGetQuote = () => {
+    // In production, this would redirect to a pricing/contact page
+    alert('Quote functionality coming soon! For now, contact us at hello@vheissu.com')
   }
 
   const updateConfig = (field: string, value: string | string[]) => {
@@ -410,12 +428,30 @@ export function ConfigurationWizard({ isOpen, onClose, selectedIndustry }: Confi
                     <p className="text-muted-foreground">Your {selectedIndustry} website has been created and optimized.</p>
                     
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button size="lg" className="px-8">
-                        VIEW MY WEBSITE
+                      <Button 
+                        size="lg" 
+                        className="px-8 bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary-dark"
+                        onClick={handleViewDemo}
+                      >
+                        VIEW DEMO WEBSITE
                       </Button>
-                      <Button variant="outline" size="lg" className="px-8">
-                        DOWNLOAD FILES
+                      <Button 
+                        variant="outline" 
+                        size="lg" 
+                        className="px-8 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                        onClick={handleGetQuote}
+                      >
+                        GET FULL SERVICE QUOTE
                       </Button>
+                    </div>
+                    
+                    <div className="mt-6 p-4 bg-secondary/10 rounded-lg border border-secondary/20 text-center">
+                      <p className="text-sm text-muted-foreground mb-2">
+                        <strong className="text-secondary">This is a demo preview.</strong> Get the full website with hosting, domain, and ongoing support.
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        Starting at $297/month • Full ownership • 24/7 support • SEO optimization
+                      </p>
                     </div>
                   </div>
                 )}
@@ -451,6 +487,13 @@ export function ConfigurationWizard({ isOpen, onClose, selectedIndustry }: Confi
             </Button>
           </div>
         )}
+        
+        {/* Demo Website Preview */}
+        <DemoWebsitePreview
+          isOpen={showPreview}
+          onClose={() => setShowPreview(false)}
+          website={generatedWebsite}
+        />
       </motion.div>
     </div>
   )
